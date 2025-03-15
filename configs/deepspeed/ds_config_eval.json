@@ -1,0 +1,16 @@
+{
+    "train_micro_batch_size_per_gpu": 12,
+    "gradient_accumulation_steps": 6,
+    "zero_optimization": {
+        "stage": 2,
+        "contiguous_gradients": true,
+        "overlap_comm": true,
+        "reduce_scatter": true,
+        "round_robin_gradients": true
+    },
+    "zero_allow_untested_optimizer": true,
+    "fp16": {
+        "enabled": false
+    },
+    "wall_clock_breakdown": false
+}

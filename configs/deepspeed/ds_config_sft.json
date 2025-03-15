@@ -1,0 +1,26 @@
+{
+    "train_micro_batch_size_per_gpu": 6,
+    "gradient_accumulation_steps": 6,
+    "zero_optimization": {
+        "stage": 2,
+        "contiguous_gradients": true,
+        "overlap_comm": true,
+        "reduce_scatter": true,
+        "round_robin_gradients": true
+    },
+    "zero_allow_untested_optimizer": true,
+    "fp16": {
+        "enabled": false
+    },
+    "wall_clock_breakdown": false,
+    "optimizer": {
+        "type": "Adafactor",
+        "params": {
+            "lr": 9e-5,
+            "weight_decay": 1e-4,
+            "scale_parameter": false,
+            "relative_step": false,
+            "warmup_init": false
+        }
+    }
+}
